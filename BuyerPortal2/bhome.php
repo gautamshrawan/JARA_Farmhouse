@@ -15,94 +15,10 @@ include("../Functions/functions.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <a href="https://icons8.com/icon/83325/roman-soldier"></a>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
     <script>
-        function state() {
-            var a = document.getElementById('states').value;
-
-            if (a === '31') {
-                var array = ['Andamans', 'Nicobars'];
-            } else if (a === '01') {
-                var array = ['Adilabad', 'Nizamabad', 'Karimnagar', 'Medak', 'Hyderabad', 'Rangareddi', 'Mahbubnagar', 'Nalgonda', 'Warangal', 'Khammam', 'Srikakulam', 'Vizianagaram', 'Visakhapatnam', 'East Godavari', 'West Godavari', 'Krishna', 'Guntur', 'Prakasam', 'Nellore', 'Cuddapah', 'Kurnool', 'Anantapur', 'Chittoor'];
-            } else if (a === '02') {
-                var array = ['Kokrajhar', 'Dhubri', 'Goalpara', 'Bongaigaon', 'Barpeta', 'Kamrup', 'Nalbari', 'Darrang', 'Marigaon', 'Nagaon', 'Sonitpur', 'Lakhimpur', 'Dhemaji', 'Tinsukia', 'Dibrugarh', 'Sibsagar', 'Jorhat', 'Golaghat', 'Karbi Anglong', 'North Cachar Hills', 'Cachar', 'Karimganj', 'Hailakandi'];
-            } else if (a === '03') {
-                var array = ['Pashchim Champaran', 'Purba Champaran', 'Sheohar *', 'Sitamarhi', 'Madhubani', 'Supaul *', 'Araria', 'Kishanganj', 'Purnia', 'Katihar', 'Madhepura', 'Saharsa', 'Darbhanga', 'Muzaffarpur', 'Gopalganj', 'Siwan', 'Saran', 'Vaishali', 'Samastipur', 'Begusarai', 'Khagaria', 'Bhagalpur', 'Banka *', 'Munger', 'Lakhisarai *', 'Sheikhpura *', 'Nalanda', 'Patna', 'Bhojpur', 'Buxar *', 'Kaimur (Bhabua) *', 'Rohtas', 'Jehanabad ', 'Aurangabad', 'Gaya', 'Nawada', 'Jamui *'];
-            } else if (a === '04') {
-                var array = ['Kachchh', 'Banas Kantha', 'Patan  *', 'Mahesana', 'Sabar Kantha', 'Gandhinagar', 'Ahmadabad', 'Surendranagar', 'Rajkot', 'Jamnagar', 'Porbandar  *', 'Junagadh', 'Amreli', 'Bhavnagar', 'Anand  *', 'Kheda', 'Panch Mahals', 'Dohad  *', 'Vadodara', 'Narmada  *', 'Bharuch', 'Surat', 'The Dangs', 'Navsari  *', 'Valsad'];
-            } else if (a === '05') {
-                var array = ['Panchkula *', 'Ambala', 'Yamunanagar', 'Kurukshetra', 'Kaithal', 'Karnal', 'Panipat', 'Sonipat', 'Jind', 'Fatehabad *', 'Sirsa', 'Hisar', 'Bhiwani', 'Rohtak', 'Jhajjar *', 'Mahendragarh', 'Rewari', 'Gurgaon', 'Faridabad'];
-            } else if (a === '06') {
-                var array = ['Chamba', 'Kangra', 'Lahul & Spiti', 'Kullu', 'Mandi', 'Hamirpur', 'Una', 'Bilaspur', 'Solan', 'Sirmaur', 'Shimla', 'Kinnaur'];
-            } else if (a === '07') {
-                var array = ['Kupwara', 'Baramula', 'Srinagar', 'Badgam', 'Pulwama', 'Anantnag', 'Leh (Ladakh)', 'Kargil', 'Doda', 'Udhampur', 'Punch', 'Rajauri', 'Jammu', 'Kathua'];
-            } else if (a === '08') {
-                var array = ['Belgaum', 'Bagalkot *', 'Bijapur', 'Gulbarga', 'Bidar', 'Raichur', 'Koppal *', 'Gadag *', 'Dharwad', 'Uttara Kannada', 'Haveri *', 'Bellary', 'Chitradurga', 'Davangere*', 'Shimoga', 'Udupi *', 'Chikmagalur', 'Tumkur', 'Kolar', 'Bangalore', 'Bangalore Rural', 'Mandya', 'Hassan', 'Dakshina Kannada', 'Kodagu', 'Mysore', 'Chamrajnagar*'];
-            } else if (a === '09') {
-                var array = ['Kasaragod', 'Kannur', 'Wayanad', 'Kozhikode', 'Malappuram', 'Palakkad', 'Thrissur', 'Ernakulam', 'Idukki', 'Kottayam', 'Alappuzha', 'Pathanamthitta', 'Kollam', 'Thiruvananthapuram'];
-            } else if (a === '10') {
-                var array = ['Sheopur *', 'Morena', 'Bhind', 'Gwalior', 'Datia', 'Shivpuri', 'Guna', 'Tikamgarh', 'Chhatarpur', 'Panna', 'Sagar', 'Damoh', 'Satna', 'Rewa', 'Umaria *', 'Shahdol', 'Sidhi', 'Neemuch *', 'Mandsaur', 'Ratlam', 'Ujjain', 'Shajapur', 'Dewas', 'Jhabua', 'Dhar', 'Indore', 'West Nimar', 'Barwani *', 'East Nimar', 'Rajgarh', 'Vidisha', 'Bhopal', 'Sehore', 'Raisen', 'Betul', 'Harda *', 'Hoshangabad', 'Katni *', 'Jabalpur', 'Narsimhapur', 'Dindori *', 'Mandla', 'Chhindwara', 'Seoni', 'Balaghat'];
-            } else if (a === '11') {
-                var array = ['Nandurbar *', 'Dhule', 'Jalgaon', 'Buldana', 'Akola', 'Washim *', 'Amravati', 'Wardha', 'Nagpur', 'Bhandara', 'Gondiya *', 'Gadchiroli', 'Chandrapur', 'Yavatmal', 'Nanded', 'Hingoli *', 'Parbhani', 'Jalna', 'Aurangabad', 'Nashik', 'Thane', 'Mumbai (Suburban) *', 'Mumbai', 'Raigarh', 'Pune', 'Ahmadnagar', 'Bid', 'Latur', 'Osmanabad', 'Solapur', 'Satara', 'Ratnagiri', 'Sindhudurg', 'Kolhapur', 'Sangli'];
-            } else if (a == 12) {
-                var array = ['Senapati', 'Tamenglong', 'Churachandpur', 'Bishnupur', 'Thoubal', 'Imphal West', 'Imphal East *', 'Ukhrul', 'Chandel'];
-            } else if (a === '18') {
-                var array = ['Thiruvallur', 'Chennai', 'Kancheepuram', 'Vellore', 'Dharmapuri', 'Tiruvannamalai', 'Viluppuram', 'Salem', 'Namakkal   *', 'Erode', 'The Nilgiris', 'Coimbatore', 'Dindigul', 'Karur  *', 'Tiruchirappalli', 'Perambalur  *', 'Ariyalur  *', 'Cuddalore', 'Nagapattinam  *', 'Thiruvarur', 'Thanjavur', 'Pudukkottai', 'Sivaganga', 'Madurai', 'Theni  *', 'Virudhunagar', 'Ramanathapuram', 'Thoothukkudi', 'Tirunelveli ', 'Kanniyakumari'];
-            } else if (a === '39') {
-                var array = ['Yanam', 'Pondicherry', 'Mahe', 'Karaikal'];
-            } else if (a === '37') {
-                var array = ['Lakshadweep'];
-            } else if (a === '42') {
-                var array = ['North Goa ', 'South Goa'];
-            } else if (a === '34') {
-                var array = ['Dadra & Nagar Haveli'];
-            } else if (a === '36') {
-                var array = ['Diu', 'Daman'];
-            } else if (a === '23') {
-                var array = ['Koriya *', 'Surguja', 'Jashpur *', 'Raigarh', 'Korba *', 'Janjgir - Champa*', 'Bilaspur', 'Kawardha *', 'Rajnandgaon', 'Durg', 'Raipur', 'Mahasamund *', 'Dhamtari *', 'Kanker *', 'Baster', 'Dantewada*'];
-            } else if (a === '24') {
-                var array = ['Garhwa *', 'Palamu', 'Chatra *', 'Hazaribag', 'Kodarma *', 'Giridih', 'Deoghar', 'Godda', 'Sahibganj', 'Pakaur *', 'Dumka', 'Dhanbad', 'Bokaro *', 'Ranchi', 'Lohardaga', 'Gumla', 'Pashchimi Singhbhum', 'Purbi Singhbhum', 'ORISSA', 'Bargarh  *', 'Jharsuguda  *', 'Sambalpur', 'Debagarh  *', 'Sundargarh', 'Kendujhar', 'Mayurbhanj', 'Baleshwar', 'Bhadrak  *', 'Kendrapara *', 'Jagatsinghapur  *', 'Cuttack', 'Jajapur  *', 'Dhenkanal', 'Anugul  *', 'Nayagarh  *', 'Khordha  *', 'Puri', 'Ganjam', 'Gajapati  *', 'Kandhamal', 'Baudh  *', 'Sonapur  *', 'Balangir', 'Nuapada  *', 'Kalahandi', 'Rayagada  *', 'Nabarangapur  *', 'Koraput', 'Malkangiri  *'];
-            } else if (a === '21') {
-                var array = ['Darjiling ', 'Jalpaiguri ', 'Koch Bihar ', 'Uttar Dinajpur', 'Dakshin Dinajpur *', 'Maldah ', 'Murshidabad ', 'Birbhum', 'Barddhaman ', 'Nadia ', 'North Twenty Four Parganas', 'Hugli ', 'Bankura ', 'Puruliya', 'Medinipur ', 'Haora ', 'Kolkata', 'South  Twenty Four Parganas'];
-            } else if (a === '13') {
-                var array = ['West Garo Hills', 'East Garo Hills', 'South Garo Hills *', 'West Khasi Hills', 'Ri Bhoi  *', 'East Khasi Hills', 'Jaintia Hills'];
-            } else if (a === '22') {
-                var array = ['North ', 'West', 'South', 'East'];
-            } else if (a === '20') {
-                var array = ['Saharanpur', 'Muzaffarnagar', 'Bijnor', 'Moradabad', 'Rampur', 'Jyotiba Phule Nagar *', 'Meerut', 'Baghpat *', 'Ghaziabad', 'Gautam Buddha Nagar *', 'Bulandshahr', 'Aligarh', 'Hathras *', 'Mathura', 'Agra', 'Firozabad', 'Etah', 'Mainpuri', 'Budaun', 'Bareilly', 'Pilibhit', 'Shahjahanpur', 'Kheri', 'Sitapur', 'Hardoi', 'Unnao', 'Lucknow', 'Rae Bareli', 'Farrukhabad', 'Kannauj *', 'Etawah', 'Auraiya *', 'Kanpur Dehat', 'Kanpur Nagar', 'Jalaun ', 'Jhansi', 'Lalitpur', 'Hamirpur', 'Mahoba *', 'Banda', 'Chitrakoot *', 'Fatehpur', 'Pratapgarh', 'Kaushambi *', 'Allahabad ', 'Barabanki', 'Faizabad', 'Ambedkar Nagar *', 'Sultanpur', 'Bahraich', 'Shrawasti *', 'Balrampur *', 'Gonda', 'Siddharthnagar', 'Basti', 'Sant Kabir Nagar *', 'Maharajganj', 'Gorakhpur', 'Kushinagar *', 'Deoria', 'Azamgarh', 'Mau', 'Ballia', 'Jaunpur', 'Ghazipur', 'Chandauli *', 'Varanasi', 'Sant Ravidas Nagar *', 'Mirzapur', 'Sonbhadra'];
-            } else if (a === '17') {
-                var array = ['Ganganagar', 'Hanumangarh *', 'Bikaner', 'Churu', 'Jhunjhunun', 'Alwar', 'Bharatpur', 'Dhaulpur', 'Karauli *', 'Sawai Madhopur', 'Dausa *', 'Jaipur', 'Sikar', 'Nagaur', 'Jodhpur', 'Jaisalmer', 'Barmer', 'Jalor', 'Sirohi', 'Pali', 'Ajmer', 'Tonk', 'Bundi', 'Bhilwara', 'Rajsamand *', 'Udaipur', 'Dungarpur', 'Banswara', 'Chittaurgarh', 'Kota', 'Baran *', 'Jhalawar'];
-            } else if (a === '16') {
-                var array = ['Gurdaspur', 'Amritsar', 'Kapurthala', 'Jalandhar', 'Hoshiarpur', 'Nawanshahr *', 'Rupnagar', 'Fatehgarh Sahib *', 'Ludhiana', 'Moga *', 'Firozpur', 'Muktsar *', 'Faridkot', 'Bathinda', 'Mansa *', 'Sangrur', 'Patiala'];
-            } else if (a === '14') {
-                var array = ['Mon', 'Tuensang', 'Mokokchung', 'Zunheboto', 'Wokha', 'Dimapur *', 'Kohima', 'Phek'];
-            } else if (a === '19') {
-                var array = ['West Tripura ', 'South Tripura ', 'Dhalai  *', 'North Tripura '];
-            } else if (a === '38') {
-                var array = ['Mamit *', 'Kolasib *', 'Aizawl', 'Champhai *', 'Serchhip *', 'Lunglei', 'Lawngtlai', 'Saiha *'];
-            } else if (a === '32') {
-                var array = ['Tawang', 'West Kameng', 'East Kameng', 'Papum Pare *', 'Lower Subansiri', 'Upper Subansiri', 'West Siang', 'East Siang', 'Upper Siang *', 'Dibang Valley', 'Lohit', 'Changlang', 'Tirap'];
-            } else if (a === '33') {
-                var array = ['Chandigarh'];
-            } else if (a === '35') {
-                var array = ['North West   *', 'North   *', 'North East   *', 'East   *', 'New Delhi', 'Central  *', 'West   *', 'South West   *', 'South  *'];
-            } else if (a === '40') {
-                var array = ['Uttarkashi', 'Chamoli', 'Rudraprayag *', 'Tehri Garhwal', 'Dehradun', 'Garhwal', 'Pithoragarh', 'Bageshwar', 'Almora', 'Champawat', 'Nainital', 'Udham Singh Nagar *', 'Hardwar'];
-            }
-
-
-
-            var string = "";
-            for (let i = 0; i < array.length; i++) {
-                string = string + "<option>" + array[i] + "</option>";
-            }
-            string = "<select nmae = 'lol'>" + string + "</select>"
-            document.getElementById('district').innerHTML = string;
-
-        }
+        
     </script>
     <script>
         var a;
@@ -122,10 +38,79 @@ include("../Functions/functions.php");
         }
     </script>
     <style>
-        .myfooter {
-            background-color: #292b2c;
 
-            color: goldenrod;
+        /* Header section
+
+        .title {
+            font-size: 13px;
+            font-weight: bold;
+
+         
+           
+            text-align: center;
+            }
+                            
+                        header {
+                background-color: #333;
+                color: white;
+                padding: 10px;
+                }
+
+                .header-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                }
+
+                .header-title {
+                font-weight: bold;
+                }
+
+                .header-links a {
+                color: white;
+                text-decoration: none;
+                margin-right: 10px;
+                }
+
+                .header-links span {
+                margin-left: 10px;
+                } */
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-links {
+    margin-top: 10px;
+  }
+
+  .header-links a,
+  .header-links span {
+    margin: 5px;
+  }
+}
+/* <-----------------------> */
+
+        .navbar-nav .nav-link {
+  font-size: 14px;
+}
+
+/* Reduce padding of navigation links */
+.navbar-nav .nav-link {
+  padding: 0.5rem;
+}
+
+/* Reduce height of the navigation bar */
+.navbar {
+  height: 50px;
+}
+        .myfooter {
+            background-color: #32cd32;
+
+            color: whitesmoke;
             margin-top: 15px;
         }
 
@@ -134,7 +119,7 @@ include("../Functions/functions.php");
         }
 
         a {
-            color: goldenrod;
+            color: whitesmoke;
         }
 
         * {
@@ -143,12 +128,12 @@ include("../Functions/functions.php");
             box-sizing: border-box;
         }
 
-        nav {
+        /* nav {
             background-color: #292b2c;
-        }
+        } */
 
         .navbar-custom {
-            background-color: #292b2c;
+            background-color: #32cd32;
         }
 
         /* change the brand and text color */
@@ -207,7 +192,7 @@ include("../Functions/functions.php");
         }
 
         .searchbox {
-            width: 60%;
+            width: 50%;
         }
 
         .lists {
@@ -223,199 +208,6 @@ include("../Functions/functions.php");
             margin-right: -30%;
             margin-left: 35%;
         }
-        .featured-categories
-{
-	margin: 50px 0;
-	
-}
-
-/*/*-----product-top css-------*/
-
-.product-top img
-{
-	width: 100%;
-	height: 300px;
-}
-.overlay-right
-{
-	display: block;
-	opacity: 0;
-	position: absolute;
-	top: 10%;
-	margin-left: 0;
-	width: 70px;
-	margin-bottom: 5%;
-	margin-top: 5%;
-	
-}
-.overlay-right .fa
-{
-	cursor: pointer;
-	background-color: #fff;
-	color: #000;
-	height: 35px;
-	width: 35px;
-	font-size: 20px;
-	padding: 7px;
-	margin-bottom: 5%;
-	margin-top: 10px;;
-	 
-
-}
-.overlay-right .btn-secondary
-{
-	background: none !important;
-	border: none !important;
-	box-shadow: none !important;
-}
-.product-top:hover .overlay-right
-{
-	opacity: 1;
-	margin-left: 5%;
-	transition: 0.5s;
-}
-
-.product-bottom h3
-{
-	font-size: 28px;
-	padding-bottom: 10px; 
-}
-
-#masthead {
-	margin-top: 3em;
-	padding: 2em 0 0.5em 0;
-	border-bottom: 1px solid #ddd;
-}
-
-#masthead h1 {
-	margin: 0;
-	font-size: 3.5em;
-	overflow: hidden;
-	padding-left: 85px;
-	min-height: 82px;
-	line-height: 2.3;
-	
-	
-	
-}
-
-.tagline {
-	float: right;
-	color: #15c93c;
-	font-size: 14px;
-	padding-top: 3.5em;
-}
-
-#products ul {
-	margin: 1.5em 0;
-	padding: 0;
-	list-style: none;
-	overflow: hidden;
-}
-
-#products li {
-	float: left;
-	width: 31%;
-	margin: 0 1%;
-	display: block;
-}
-
-.product-image {
-	width: 100%;
-	padding: 20px 0;
-	transition: 1s;
-	cursor: pointer;
-	height: 300px;
-	overflow: hidden;
-	
-}
-
-.product-description {
-	
-	
-	color: black;
-	border-radius: 5px;
-}
-
-.product-name {
-	text-align: center;
-	color: black;
-	margin: 0;
-	font-size: 1.4em;
-	
-	
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-}
-
-.product-price {
-	width: 2.7em;
-	height: 2em;
-	font-size: 1.7em;
-	text-align: center;
-	margin-left: 90px;
-	background: #fff;
-	color: black;
-	
-}
-
-form.add-to-cart div
-{
-	text-align: center;
-	color: black;
-
-	
-	
-}
-
-form.add-to-cart p 
-{
-	text-align: center;
-	
-	color: #15c93c;
-}
-
-form.add-to-cart p .btn
-{
-	text-align: center;
-	
-	color: white;
-	background: red;
-	margin-bottom: 40px;
-}
-
-
-form input.qty {
-	width: 60px;
-	border: 2px solid #eee;
-	font: 1.5em 'PT Serif', serif;
-	background: #f9f9f9;
-	color: #000;
-	border-radius: 3px;
-	margin-left: 0.4em;
-	
-}
-
-.btn{
-	display: inline-block;
-	background: #800;
-	color: white;
-	
-	padding: 0.3em 1em;
-	text-align: center;
-	border-radius: 4px;
-	border: 1px solid white;
-}
- a.btn {
-	display: inline-block;
-	background: #cc1400;
-	color: #fff;
-	font: 1em 'PT Serif', serif;
-	padding: 0.3em 1em;
-	text-align: center;
-	border-radius: 4px;
-	border: 1px solid #a00;
-}
 
         /* .images {
             transition: 0.5s;
@@ -565,8 +357,8 @@ form input.qty {
         }
 
         .myfooter {
-            background-color: #292b2c;
-            color: goldenrod;
+            background-color:#228B22;
+            color:white;
             margin-top: 15px;
         }
 
@@ -575,7 +367,7 @@ form input.qty {
         }
 
         a {
-            color: goldenrod;
+            color:whitesmoke;
         }
 
 
@@ -603,52 +395,6 @@ form input.qty {
                 max-height: 40%;
             }
         }
-     /*css
-     /* Footer */
-/* Footer */
-.footer {
-  background-color: #f8f9fa;
-  padding: 2rem 0;
-  width: 100%;
-}
-
-.footer h5 {
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.footer img {
-  margin-right: 0.5rem;
-}
-
-.footer .social li {
-  margin: 0 0.5rem;
-}
-
-.footer .social a {
-  color: #333;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-
-.footer .social a:hover {
-  color: #007bff;
-}
-
-.footer p {
-  margin-bottom: 0;
-}
-
-.footer p a {
-  color: #007bff;
-}
-
-.footer p a:hover {
-  text-decoration: none;
-}
-.container{
-    colo
-}
 
         /* Responsive layout - makes a two column-layout instead of four columns */
         /* @media screen and (max-width: 800px) {
@@ -689,7 +435,17 @@ form input.qty {
 </head>
 
 <body>
- <!-- footer -->
+<header style="background-color: white; color: green; padding: 10px;">
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+    <div class="title" style="flex: 1; text-align: center;">Fresh from Farm to Table: JARA - Your Homegrown Market!</div>
+    <div>
+    <a href="../auth/FarmerLogin.php" style="color: green; text-decoration: none; margin-right: 12px;">Become a Farmer</a>
+      <!-- Corrected typo "Became a Framer" to "Become a Farmer" -->
+    </div>
+  </div>
+</header>
+
+
 
     <nav class="navbar navbar-expand-xl ">
 
@@ -703,14 +459,14 @@ form input.qty {
             </div>
             <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;margin-top:2px;'></i></div>
             <a class="float-left" href="bhome.php">
-                <img src="logo.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
+                <img src="jara.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
             </a>
         </div>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;margin-right:-9%;font-size:28px;"></i></span>
         </button>
         <a class="float-left" href="bhome.php">
-            <img src="logo.png" class="float-left mr-2 moblogo" alt="Logo" style="height:60px;">
+            <img src="Jara.png" class="float-left mr-2 moblogo" alt="Logo" style="height:100px; padding:10px;">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -778,6 +534,8 @@ form input.qty {
         </div>
 
     </nav>
+    <hr>
+
 
     <div class="container">
         <div class="d-flex justify-content-around bg-white mb-3">
@@ -821,16 +579,11 @@ form input.qty {
         </div>
     </div>
 
-  
-
-  
 
 
 
 
-
-    <div class="container"> 
-        <img src="..\Images\Homepage\front.png" class="img-fluid firstimage d-block mx-auto" alt="Responsive image">
+    <div class="container"> <img src="home2.jpg" class="img-fluid firstimage d-block mx-auto" alt="Responsive image">
     </div>
     <br>
     <br>
@@ -882,7 +635,7 @@ form input.qty {
     <div class="container">
 
         <div class="text-center">
-            <h1 id="headings" class="longguard"><span><b>Best Selling Products All Over India </b></span>
+            <h1 id="headings" class="longguard"><span><b>Best Selling Products </b></span>
             </h1>
         </div>
         <br>
@@ -899,324 +652,40 @@ form input.qty {
     </div>
 
 
-							<div class="product-bottom text-center">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<h3>Grapes</h3>
-								<div class="product-description" data-name="grapes" data-price="100">
 
-									<p class="product-price">&#8377; 100</p>
-									<form class="add-to-cart" action="cart.html">
-										<div>
-											<label for="qty-2">Quantity</label>
-											<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
-										</div>
-										<p><input type="submit" value="Add to cart" class="btn" /></p>
-									</form>
-
-								</div>
-							</div>
-						</div>
-
-
-						<div class="col-md-3">
-							<div class="product-top">
-								<img src="https://i.postimg.cc/fRHRNGMN/product2.jpg">
-								<div class="overlay-right">
-									<button type="button" class="btn btn-secondary" title="Quick Shop">
-										<i class="fa fa-eye"></i>
-									</button>
-
-									<button type="button" class="btn btn-secondary" title="Add to Wishlist">
-										<i class="fa fa-heart-o"></i>
-									</button>
-
-									<button type="button" class="btn btn-secondary" title="Add to Cart">
-										<i class="fa fa-shopping-cart"></i>
-									</button>
-								</div>
-							</div>
-        <hr>
-
-        <div class="row BigBox">
-
-         
-
-            <hr>
-        </div>
-        <hr>
-    </div>
-    <br><br>
-
-
-    <div class="container">
-        <div class="text-center">
-            <!-- <h2 id="headings" class="destext">Fresh fruits</h2> -->
-            <h1 id="headings" class="guard"><span><b>Fresh  Vegetables </b></span>
-            </h1>
-        </div>
-		<section class="new-arrivals" id="new-arrivals">
-			<div id="site">
-				<div class="container">
-					<div class="title-box">
-						<h2>New Arrivals</h2>
-					</div>
-					<div class="row">
-						<div class="col-md-3">
-							<div class="product-top">
-								<img src="images\grapes.jpg">
-								<div class="overlay-right">
-									<button type="button" class="btn btn-secondary" title="Quick Shop">
-										<i class="fa fa-eye"></i>
-									</button>
-
-									<button type="button" class="btn btn-secondary" title="Add to Wishlist">
-										<i class="fa fa-heart-o"></i>
-									</button>
-
-									<button type="button" class="btn btn-secondary" title="Add to Cart">
-										<i class="fa fa-shopping-cart"></i>
-									</button>
-								</div>
-							</div>
-
-
-							<div class="product-bottom text-center">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<h3>Grapes</h3>
-								<div class="product-description" data-name="grapes" data-price="100">
-
-									<p class="product-price">&#8377; 100</p>
-									<form class="add-to-cart" action="cart.html">
-										<div>
-											<label for="qty-2">Quantity</label>
-											<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
-										</div>
-										<p><input type="submit" value="Add to cart" class="btn" /></p>
-									</form>
-
-								</div>
-							</div>
-						</div>
-
-
-						<div class="col-md-3">
-							<div class="product-top">
-								<img src="https://i.postimg.cc/fRHRNGMN/product2.jpg">
-								<div class="overlay-right">
-									<button type="button" class="btn btn-secondary" title="Quick Shop">
-										<i class="fa fa-eye"></i>
-									</button>
-
-									<button type="button" class="btn btn-secondary" title="Add to Wishlist">
-										<i class="fa fa-heart-o"></i>
-									</button>
-
-									<button type="button" class="btn btn-secondary" title="Add to Cart">
-										<i class="fa fa-shopping-cart"></i>
-									</button>
-								</div>
-							</div>
-        <hr>
-
-        <div class="row BigBox">
-
-           
-
-            <hr>
-        </div>
-        <hr>
-    </div>
-    <br><br>
-
-    <div class="container">
-
-        <div class="text-center">
-            <h1 id="headings" class="longguard"><span><b>Best Selling Products All Over Nepal </b></span>
-            </h1>
-        </div>
-        
-        <br>
-
-        <div class="row">
-           
-        </div>
-        <br><br>
-        <div class="row">
-						<div class="col-md-3">
-							<div class="product-top">
-								<img src="https://i.postimg.cc/9XqS5jfP/product9.jpg">
-								<div class="overlay-right">
-									<button type="button" class="btn btn-secondary" title="Quick Shop">
-										<i class="fa fa-eye"></i>
-									</button>
-
-									<button type="button" class="btn btn-secondary" title="Add to Wishlist">
-										<i class="fa fa-heart-o"></i>
-									</button>
-
-									<button type="button" class="btn btn-secondary" title="Add to Cart">
-										<i class="fa fa-shopping-cart"></i>
-									</button>
-								</div>
-							</div>
-
-
-							<div class="product-bottom text-center">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<h3>Onion</h3>
-								<div class="product-description" data-name="Onion" data-price="20">
-
-									<p class="product-price">&#8377; 20</p>
-									<form class="add-to-cart" action="cart.html">
-										<div>
-											<label for="qty-2">Quantity</label>
-											<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
-										</div>
-										<p><input type="submit" value="Add to cart" class="btn" /></p>
-									</form>
-
-								</div>
-							</div>
-						</div>
-
-
-						<div class="col-md-3">
-							<div class="product-top">
-								<img src="https://i.postimg.cc/Fs67f3vX/product10.jpg">
-								<div class="overlay-right">
-									<button type="button" class="btn btn-secondary" title="Quick Shop">
-										<i class="fa fa-eye"></i>
-									</button>
-
-									<button type="button" class="btn btn-secondary" title="Add to Wishlist">
-										<i class="fa fa-heart-o"></i>
-									</button>
-
-									<button type="button" class="btn btn-secondary" title="Add to Cart">
-										<i class="fa fa-shopping-cart"></i>
-									</button>
-								</div>
-							</div>
-
-
-							<div class="product-bottom text-center">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<h3>Beetroot</h3>
-
-								<div class="product-description" data-name="Beetroot" data-price="100">
-
-									<p class="product-price">&#8377; 100</p>
-									<form class="add-to-cart" action="cart.html">
-										<div>
-											<label for="qty-2">Quantity</label>
-											<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
-										</div>
-										<p><input type="submit" value="Add to cart" class="btn" /></p>
-									</form>
-
-								</div>
-							</div>
-						</div>
-
-
-
-						<div class="col-md-3">
-							<div class="product-top">
-								<img src="https://i.postimg.cc/vm0RBLRW/product11.jpg">
-								<div class="overlay-right">
-									<button type="button" class="btn btn-secondary" title="Quick Shop">
-										<i class="fa fa-eye"></i>
-									</button>
-
-									<button type="button" class="btn btn-secondary" title="Add to Wishlist">
-										<i class="fa fa-heart-o"></i>
-									</button>
-
-									<button type="button" class="btn btn-secondary" title="Add to Cart">
-										<i class="fa fa-shopping-cart"></i>
-									</button>
-								</div>
-							</div>
-
-
-							<div class="product-bottom text-center">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<h3>Red Chillies</h3>
-								<div class="product-description" data-name="Red Chillies" data-price="40">
-
-									<p class="product-price">&#8377; 40</p>
-									<form class="add-to-cart" action="cart.html">
-										<div>
-											<label for="qty-2">Quantity</label>
-											<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
-										</div>
-										<p><input type="submit" value="Add to cart" class="btn" /></p>
-									</form>
-
-								</div>
-							</div>
-						</div>
-
-
-
-    </div>
-    </div>
-
-
-    
-                <div class="container">
-                     <div class="row text-center text-xs-center text-sm-left text-md-left">
-                          <div class="col aligncenter">
-                               <br>
-                               <h5>Payment Option</h5>
-                               <img src="../Images/Website/KhaltiLogoPNGimage.png" alt="paytm" style="height:40px">
-                               <img src="../Images/Website/ESewaLogoPNGimage.png" alt="paytm" style="height:37px">
-                               <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
-                          </div>
-                     </div>
-                     <div class="row">
-                          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                               <ul class="list-unstyled list-inline social text-center">
-                                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-                                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-                                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-                                    <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                               </ul>
-                          </div>
-
-                     </div>
-                     <div class="row">
-                          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
-                               <p><u><a href="https://www.agrocraft.com/">JARA</a></u> is a Company for farmers</p>
-                               <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank"></a></p>
-                          </div>
-                          </hr>
-                     </div>
+    <!-- footer -->
+    <section id="footer" class="myfooter">
+        <div class="container">
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col aligncenter">
+                    <br>
+                    <h5>Payment Option</h5>
+                    <img src="../Images/Website/Esewa.png" alt="esewa" style="height:37px" >
+                    <img src="../Images/Website/Khalti.png" alt="esewa" style="height:37px">
+                    <img src="../Images/Website/cod.png" alt="paytm" style="height:57px">
                 </div>
-           
-
-   
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                </hr>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                    <p><u><a href="https://www.agrocraft.com/">Jara</a></u> is a Multitrading Company for farmers ang traders</p>
+                    <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">JARA</a></p>
+                </div>
+                </hr>
+            </div>
+        </div>
+    </section>
     <!-- ./Footer a ,myfooter,aligncenter-->
 </body>
 
