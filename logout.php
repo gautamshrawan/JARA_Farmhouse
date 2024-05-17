@@ -4,7 +4,7 @@ session_start();
 
 session_destroy();
 
-echo "<script>window.open('../FarmerPortal/farmerHomepage.php','_self')</script>";
+echo "<script>window.open('../buyerportal2/bhome.php','_self')</script>";
 
 
 ?>

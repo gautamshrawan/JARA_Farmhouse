@@ -30,6 +30,7 @@
            }
 
 
+
            .header {
                 position: sticky;
                 z-index: 100;
@@ -191,6 +192,7 @@
                 height: 70px;
                 width: 100%;
                 clear: both;
+                
            }
 
            .payment {
@@ -690,7 +692,10 @@
                 padding: 0;
                 box-sizing: border-box;
            }
-
+           /* Reduce height of the navigation bar */
+               .navbar {
+               height: 70px;
+               }
            nav {
                 background-color: #292b2c;
            }
@@ -869,14 +874,14 @@
                      </div>
                      <!-- <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;'></i></div> -->
                      <a class="float-left" href="#">
-                          <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
+                          <img src="..\Images\Homepage\jara.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
                      </a>
                 </div>
                 <button class="navbar-toggler" data-toggle="collapse" style="margin-left:-20px;" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                      <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;font-size:20px; "></i></span>
                 </button>
                 <a class="float-left" href="farmerHomepage.php">
-                     <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
+                     <img src="..\Images\Homepage\jara.png" class="float-left mr-2 moblogo" alt="Logo" style="height:70px;">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -961,13 +966,13 @@
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                      <div class="carousel-inner">
                           <div class="carousel-item active">
-                               <img class="d-block w-100 resizing" src="../Images/Homepage/fruitsbasket.jpg" alt="First slide">
+                               <img class="d-block w-100 resizing" src="..\Images\Homepage\home2.jpg" alt="First slide">
                           </div>
                           <div class="carousel-item">
-                               <img class="d-block w-100 resizing" src="../Images/Website/farm1.jpeg" alt="Third slide">
+                               <img class="d-block w-100 resizing" src="..\Images\Homepage\home3.jpg" alt="Third slide">
                           </div>
                           <div class="carousel-item">
-                               <img class="d-block w-100 resizing" src="../Images/Homepage/vegetables.jpg" alt="Second slide">
+                               <img class="d-block w-100 resizing" src="..\Images\Homepage\home4.jpg" alt="Second slide">
                           </div>
 
                      </div>
@@ -981,14 +986,15 @@
                      </a>
                 </div>
            </div>
-
+                                   <br>
            <br><br>
            <div class="features container">
                 <h1 style="font-weight: bold;color:black; text-align:center">Standout Features</h1>
+                <br>
                 <div class="card-deck row text-center" style="display: flex; flex-wrap: wrap;">
                      <div class="card">
                           <p class="aligncenter">
-                               <img class="card-img-top image" src="../Images/Homepage/sms.png" alt="Card image cap" width="250px" height="200px">
+                               <img class="card-img-top image" src="../Images/Homepage/sms1.png" alt="Card image cap" width="250px" height="200px" text-align="center ">
                           </p>
                           <div class="card-body">
                                <h4 class="card-title font-weight-bold">Sms System </h4>
@@ -998,7 +1004,7 @@
                      </div>
                      <div class="card">
                           <p class="aligncenter">
-                               <img class="card-img-top image" src="../Images/Homepage/handshake.png" alt="Card image cap" width="250px" height="200px">
+                               <img class="card-img-top image" src="../Images/Homepage/hand.png" alt="Card image cap" width="250px" height="200px">
                           </p>
                           <div class="card-body">
                                <h4 class="card-title font-weight-bold">Buyer Connection</h4>
@@ -1021,36 +1027,37 @@
            </div>
            <br> <br>
            <section id="footer" class="myfooter">
-                <div class="container">
-                     <div class="row text-center text-xs-center text-sm-left text-md-left">
-                          <div class="col aligncenter">
-                               <br>
-                               <h5>Payment Option</h5>
-                               <img src="../Images/Website/paytm1.jpg" alt="paytm">
-                               <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
-                          </div>
-                     </div>
-                     <div class="row">
-                          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                               <ul class="list-unstyled list-inline social text-center">
-                                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-                                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-                                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-                                    <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                               </ul>
-                          </div>
-
-                     </div>
-                     <div class="row">
-                          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
-                               <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
-                               <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
-                          </div>
-                          </hr>
-                     </div>
+        <div class="container">
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col aligncenter">
+                    <br>
+                    <h5>Payment Option</h5>
+                    <img src="../Images/Website/Esewa.png" alt="esewa" style="height:37px" >
+                    <img src="../Images/Website/Khalti.png" alt="esewa" style="height:37px">
+                    <img src="../Images/Website/cod.png" alt="paytm" style="height:57px">
                 </div>
-           </section>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                </hr>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                    <p><u><a href="https://www.agrocraft.com/">Jara</a></u> is a Multitrading Company for farmers ang traders</p>
+                    <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">JARA</a></p>
+                </div>
+                </hr>
+            </div>
+        </div>
+    </section>
 
       </body>
 
