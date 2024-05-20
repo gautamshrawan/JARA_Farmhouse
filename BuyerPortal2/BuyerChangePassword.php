@@ -23,10 +23,11 @@ while ($row = mysqli_fetch_array($run_query)) {
 
 <style>
     h1 {
-        background-color: transparent;
+        background-color: white;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         text-align: center;
         cursor: pointer;
+        color: green;
     }
 
     textarea {
@@ -48,7 +49,7 @@ while ($row = mysqli_fetch_array($run_query)) {
         padding: 5px;
         border-style: outset;
         border-radius: 16px;
-        border-color: rgb(0, 57, 230);
+        border-color: green;
     }
 
     body {
@@ -56,7 +57,7 @@ while ($row = mysqli_fetch_array($run_query)) {
         background-repeat: no-repeat;
         background-position: center;
         background-color: white;
-        background-image: url(../Images/Website/buyerLogin.jpeg);
+        background-image: url(..Images/Homepage/Jara.png);
         border: chartreuse;
     }
 
@@ -69,7 +70,7 @@ while ($row = mysqli_fetch_array($run_query)) {
     input {
         padding: 7px;
         margin: 10px;
-        border-color: rgb(0, 57, 230);
+        border-color: green;
         display: inline-block;
         /* border-radius: 16px; */
     }
@@ -79,24 +80,13 @@ while ($row = mysqli_fetch_array($run_query)) {
         font-size: 22px;
         font-weight: bold;
         color: rgb(246, 248, 246);
-        background-color: rgb(0, 153, 255);
+        background-color: green;
         border-radius: 16px;
-        border-color: rgb(3, 66, 34);
+        border-color: whitesmoke;
         width: 64%;
     }
 
-    input[type="submit"]:hover {
-        background-color: rgb(0, 153, 255);
-        outline: none;
-        border-color: blanchedalmond;
-        color: rgb(155, 248, 4);
-        border-radius: 20%;
-        border-style: outset;
-        border-color: rgb(0, 57, 230);
-        font-weight: bolder;
-        width: 54%;
-        font-size: 18px;
-    }
+ 
 
     .one {
         height: 100px;
@@ -131,7 +121,7 @@ while ($row = mysqli_fetch_array($run_query)) {
 
 <body>
     <div class="just">
-        <a href="BuyerHomepage.php"> <i class="fa fa-home fa-4x"></i></a>
+        <a href="bhome.php"> <i class="fa fa-home fa-4x"></i></a>
     </div>
 
     <div class="box">

@@ -38,7 +38,7 @@
         }
         
         .box {
-            color: rgb(6, 36, 7);
+            color: green;
             width: 450px;
             line-height: 40px; 
             margin: auto;
@@ -48,7 +48,7 @@
             border-style: outset;
             border-width: 5px;
             border-radius: 16px;
-            border-color:rgb(0, 172, 230);
+            border-color:green;
         
         }
         
@@ -66,14 +66,14 @@
         #innerbox {
             margin: 10px;
             padding: 10px;
-            background-color: rgb(247, 248, 247);
+            background-color: green;
         }
         
         input {
             padding: 7px;
             margin: 10px;
-             border-color:rgb(0, 172, 230);
-            display: inline-block;
+             border-color:green;
+       
             border-radius: 16px;
         }
         
@@ -82,19 +82,19 @@
             font-size: 12px;
             font-weight: bold;
             color: rgb(246, 248, 246);
-            background-color: rgb(0, 191, 255);
+            background-color: green;
             border-radius: 16px;
-            border-color: rgb(0, 172, 230);
+            border-color: white;
             width: 44%;
         }
         
         input[type="submit"]:hover {
-                background-color: rgb(0, 153, 255);
+                background-color: green;
             outline: none;
-            color:  rgb(255,255,255);
+            color:  whitesmoke;
             border-radius: 20%;
             border-style: outset;
-            border-color: rgb(0, 57, 230);
+            border-color: green;
             font-weight: bolder;
             width: 54%;
             font-size: 18px;
@@ -102,7 +102,7 @@
         textarea{
              border-width: 3px; 
              border-radius: 16px; 
-             border-color:rgb(0, 172, 230);
+             
             
             
         }
@@ -129,11 +129,11 @@
             cursor: pointer;
             font-size: 24px; 
             font-weight: bold;
-            color: rgb(246, 248, 246);
+            color: green;
             /* background-color: green; */
             /* display: inline-block; */
             border-radius: 16px;
-            border-color: rgb(3, 66, 34);
+           
             width: 44%;
             margin-left:100px;
 
@@ -143,24 +143,24 @@
             cursor: pointer;
             font-size: 12px;
             font-weight: bold;
-            color: rgb(246, 248, 246);
-            border-color: rgb(3, 66, 34);
+            color: whitesmoke;
+            border-color: green;
             width: 96%;
             padding : 10px;
             padding-left:10px;
             padding-right:10px;
-            background-color: rgb(0, 191, 255);
+            background-color: green;
             border-radius: 16px;
-            border-color: rgb(0, 172, 230);    
+            border-color: green;    
         }
 
         .say:hover{
-            background-color: rgb(0, 153, 255);
+            background-color: green;
             outline: none;
-            color:  rgb(255,255,255);
+            color:  whitesmoke;
             border-radius: 20%;
             border-style: outset;
-            border-color: rgb(0, 57, 230);
+            border-color:green;
             font-weight: bolder;
             width: 80%;
             font-size: 18px;
@@ -173,7 +173,7 @@
             position:absolute;
             left:0;
             top:0px; 
-            text-shadow: 1px 1px 1px black;
+            text-shadow: 1px 1px 1px;
         }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -185,7 +185,7 @@
     
 
     <div class="just">
-        <a  href="BuyerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
+        <a  href="bhome.php"> <i  class="fa fa-home fa-4x"></i></a>
     </div>
 
 

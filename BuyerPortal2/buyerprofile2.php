@@ -1,3 +1,4 @@
+
 <?php
     include("../Includes/db.php");
     session_start();
@@ -19,461 +20,199 @@
     }   
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Buyer Profile</title>
+    
+    <script>
+        function redirectToEditProfile() {
+            window.location.href = "BuyerEditProfile.php";
+        }
+    </script>
+    <style>
+        h1 {
+            background-color: whitesmoke;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+            cursor: pointer;
+            color: green;
+            /* font-size:20px; */
+        }
+        textarea{
+            font-size:20px;
+            border-radius:15px;
+            text-align:center;
+            border-color:green;
+            background-color:transparent;
+        }
+        
+        .box {
+            color: rgb(6, 36, 7);
+            width: 450px;
+            line-height: 40px; 
+            margin: auto;
+            text-align: center;
+            margin-top: 50px;
+            padding: 5px;
+            border-style: outset;
+            border-width: 5px;
+            border-radius: 16px;
+            border-color:green;
+            /* font-size:20px; */
+        }
+        
+        body {
+            /* background-image: url(Images/Website/FarmerLogin.jpg); */
+            /* background: black; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: white;
+            background-image: url(../Images/Website/buyerLogin.jpeg);
+            border: chartreuse;
+        }
+        
+        form {
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(247, 248, 247);
+        }
+        
+        input {
+            padding: 7px;
+            margin: 10px;
+            border-color: rgb(78, 180, 121);
+            display: inline-block;
+            /* border-radius: 16px; */
+        }
+        
+        input[type="submit"] {
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            color: rgb(246, 248, 246);
+            background-color: rgb(0, 191, 255);
+            border-radius: 16px;
+            border-color: rgb(0, 172, 230);
+            width: 44%;
+        }
+        
+        input[type="submit"]:hover {
+                background-color: rgb(0, 153, 255);
+            outline: none;
+            color:  rgb(255,255,255);
+            border-radius: 20%;
+            border-style: outset;
+            border-color: rgb(0, 57, 230);
+            font-weight: bolder;
+            width: 54%;
+            font-size: 18px;
+        }
+        .one{
+            height:100px;
+            border-radius:13px;
+            
+        }
+        .two{
+            width:100px;
+            font-size:34px;
+            background:transparent;
+            border:3px;
+            border-color:green;
+            border-style:solid;
+            border-width:2px;
+        
+            
+        }
+        .just{
+            float:left;
+            margin-left:1%;
+            margin:20px;
+            position:absolute;
+            left:0;
+            top:0px; 
+            text-shadow: 1px 1px 1px black;
+        }
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <a href="https://icons8.com/icon/83325/roman-soldier"></a>
+
+       
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
+
 </head>
-<style>
-    #staticEmail{
-        text-align:center;
-         border-style:solid;
-        border-color:black;
-        /* background-color:#ff5500;*/
-        width:30%;
-        font-size:20px;
-        color:black; 
-    } 
-    .text {
-        background-color: black;
-        color: gold;
-        font-size:18px;
-    }
-    input{
-        text-align:center;
-        /* border-style:solid;
-        border-color:black; */
-        background-color:#ff5500;
-        width:50%;
-        color:red;
-    }
-    .myfooter {
-        background-color: #292b2c;
-
-        color: goldenrod;
-        margin-top: 15px;
-    }
-
-    .aligncenter {
-        text-align: center;
-    }
-
-    a {
-        color: goldenrod;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    nav {
-        background-color: #292b2c;
-    }
-
-    .navbar-custom {
-        background-color: #292b2c;
-    }
-
-    /* change the brand and text color */
-    .navbar-custom .navbar-brand,
-    .navbar-custom .navbar-text {
-        background-color: #292b2c;
-    }
-
-    .navbar-custom .navbar-nav .nav-link {
-        background-color: #292b2c;
-    }
-
-    .navbar-custom .nav-item.active .nav-link,
-    .navbar-custom .nav-item:hover .nav-link {
-        background-color: #292b2c;
-    }
-
-
-    .mybtn {
-        border-color: green;
-        border-style: solid;
-    }
-
-
-    .right {
-        display: flex;
-    }
-
-    .left {
-        display: none;
-    }
-
-    .cart {
-        /* margin-left:10px; */
-        margin-right: -9px;
-    }
-
-    .profile {
-        margin-right: 2px;
-
-    }
-
-    .login {
-        margin-right: -2px;
-        margin-top: 12px;
-        display: none;
-    }
-
-    .searchbox {
-        width: 60%;
-    }
-
-    .lists {
-        display: inline-block;
-    }
-
-    .moblists {
-        display: none;
-    }
-
-    .logins {
-        text-align: center;
-        margin-right: -30%;
-        margin-left: 35%;
-    }
-
-    .x {
-        height: 70vh;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
-        width: 100%;
-    }
-
-    .inp::placeholder {
-        display: none;
-        visibility: hidden;
-    }
-
-    /* .s {
-        width: auto;
-    }
-     */
-
-    .x {
-        background-color: white;
-        height: 80%;
-        width: 38%;
-        margin-top: 0%;
-    }
-
-   
-
-    h2,
-    h1 {
-        color: black;
-    }
-
-    .imag {
-        height: 120px;
-    }
-
-    .s {
-        width: 50%;
-        margin-left: 25%;
-        margin-right: 25%;
-        margin-top:0%;
-        margin-bottom:4%;
-    
-    }
-
-    .fp {
-        margin-left: 0%;
-        margin-top: -10%;
-        text-align: right;
-        color: black;
-        font-size: 20px;
-    }
-
-    .nu {
-        /* margin-right: 0%;
-        margin-left: 25%; */
-        margin-top: -10%;
-        text-align: center;
-        margin-left: -2%;
-        color: black;
-        font-size: 20px;
-    }
-
-    .guard {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #ffc857;
-        /* background-color: #ffc857; */
-        line-height: 0.1em;
-        margin: 10px 0 20px;
-        font-family: serif;
-    }
-
-    .guard span {
-        background: white;
-        padding: 0 10px;
-    }
-
-    .lastbtn {
-        color: goldenrod;
-    }
-
-    .text {
-        min-width: 180px !important;
-        display: inline-block !important
-    }
-
-    .inp {
-        width: 10%;
-    }
-
-    .head {
-        margin-left: -20%;
-        /* background-color: black; */
-        margin-top: 10%;
-    }
-
-    /* .area{
-
-    } */
-
-    .logo {
-        margin-left: 0%;
-        float: right;
-    }
-
-    .inner {
-        float: left;
-    }
-
-    .main {
-        float: left;
-    }
-
-    a {
-        text-decoration: none;
-        color: #333;
-    }
-
-    a:hover {
-        text-decoration: none;
-        color: black
-    }
-
-    @media only screen and (min-device-width:320px) and (max-device-width:480px) {
-        /* .mycarousel {
-            display: none;
-        }
-
-        .firstimage {
-            height: auto;
-            width: 90%;
-        }
-
-        .card {
-            width: 80%;
-            margin-left: 10%;
-            margin-right: 10%;
-
-        }
-
-        .col {
-            margin-top: 20px;
-        } */
-
-        .right {
-            display: none;
-            background-color: #ff5500;
-        }
-
-        /* 
-            .settings{
-            margin-left:79%;
-        } */
-        .left {
-            display: flex;
-        }
-
-        .moblogo {
-            display: none;
-        }
-
-        .logins {
-            text-align: center;
-            margin-right: 35%;
-            padding: 15px;
-        }
-
-        .searchbox {
-            width: 95%;
-            margin-right: 5%;
-            margin-left: 0%;
-        }
-
-        .moblists {
-            display: inline-block;
-            text-align: center;
-            width: 100%;
-        }
-
-    
-        .x {
-            padding: 0;
-            width: 80%;
-            margin-left: 10%;
-            margin-right: 10%;
-        }
-
-   
-        .s {
-            width: 100%;
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-        .inp::placeholder {
-            visibility: visible;
-        }
-
-        .input-group-prepend {
-            display: inline-block;
-       
-        }
-
-        .fp {
-            margin-left: 0%;
-            margin-top: -30%;
-            text-align: center;
-         
-        }
-
-        .nu {
-            margin-right: 0%;
-            margin-left: 0%;
-            margin-top: -15%;
-            text-align: center;
-        }
-
-        .text1 {
-            text-align: center;
-            font-size: 20px;
-            color: #333;
-        }
-
-        .text2 {
-            text-align: center;
-            font-size: 20px;
-        }
-
-        .button1 {
-            margin-top: 10%;
-        }
-
-        .inp1 {
-            text-align: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-      
-        .text {
-        min-width: 150px !important;
-        display: inline-block !important
-    }
-    }
-</style>
 
 <body>
-
-
-
-
-
-    
-    <div class="container">
-    <div class="text-center">
-        <br>
-<br>
-        <b>
-            <h1 class="guard"><span><b>BUYER'S PROFILE</b></span>
-            </h1>
-        </b>
-        <br>
-    </div></div>
-
-    <div class="container" >
-        <div class="form">
-            <div class="input-group mt-4 s">
-                <div class="input-group-prepend ">
-                    <span class="input-group-text text  " id="inputGroup-sizing-default" ><i class="fas fa-user mr-2"></i>Full name</span>
-                </div>
-                <input type="text" readonly class="form-control-plaintext border border-dark" id="staticEmail" value="<?php echo $name?>">
-            </div>
-            <div class="input-group mt-4 s">
-                <div class="input-group-prepend ">
-                    <span class="input-group-text text  " id="inputGroup-sizing-default" ><i class="fas fa-phone-alt mr-2"></i>Phone No.</span>
-                </div>
-                <input type="phonenumber" readonly class="form-control-plaintext border border-dark" id="staticEmail" value="<?php echo $phone ?>">
-            </div>
-            <div class="input-group mt-4 s">
-                <div class="input-group-prepend ">
-                    <span class="input-group-text text  " id="inputGroup-sizing-default" ><i class="fas fa-home mr-2"></i>Address</span>
-                </div>
-                <input type="text" readonly class="form-control-plaintext border border-dark" id="staticEmail" value="<?php echo $address ?>">
-            </div> 
-            <div class="input-group mt-4 s">
-                <div class="input-group-prepend ">
-                    <span class="input-group-text text  " id="inputGroup-sizing-default" ><i class="fas fa-pencil-alt mr-2"></i>Pan No.</span>
-                </div>
-                <input type="text" readonly class="form-control-plaintext border border-dark" id="staticEmail" value=" <?php echo $pan ?> ">
-            </div> 
-            <div class="input-group mt-4 s">
-                <div class="input-group-prepend ">
-                    <span class="input-group-text text  " id="inputGroup-sizing-default" ><i class="fas fa-university mr-2"></i>Account No.</span>
-                </div>
-                <input type="text" readonly class="form-control-plaintext border border-dark" id="staticEmail" value=" <?php echo $bank ?>">
-            </div> 
-            <div class="input-group mt-4 s">
-                <div class="input-group-prepend ">
-                    <span class="input-group-text text  " id="inputGroup-sizing-default" ><i class="fas fa-building mr-2"></i>Company</span>
-                </div>
-                <input type="text" readonly class="form-control-plaintext border border-dark" id="staticEmail" value="<?php echo $comp ?>">
-            </div> 
-            <div class="input-group mt-4 s">
-                <div class="input-group-prepend ">
-                    <span class="input-group-text text  " id="inputGroup-sizing-default" ><i class="fas fa-id-badge mr-2"></i>License</span>
-                </div>
-                <input type="text" readonly class="form-control-plaintext border border-dark" id="staticEmail" value=" <?php echo $license?>">
-            </div> 
-            <div class="input-group mt-4 s">
-                <div class="input-group-prepend ">
-                    <span class="input-group-text text  " id="inputGroup-sizing-default" ><i class="far fa-envelope mr-2"></i>Email id </span>
-                </div>
-                <input type="text" readonly class="form-control-plaintext border border-dark" id="staticEmail" value="<?php echo $mail?> ">
-            </div> 
-        </div>
-        <button type="button" onclick="window.location.href = 'editprofile.php';" class="btn text-center d-flex mx-auto btn-lg" style="background-color:#292b2c;color:goldenrod">Edit Profile</button>
-
+    <div class="just">
+        <a  href="bhome.php"> <i  class="fa fa-home fa-4x"></i></a>
     </div>
 
-    
-</body>
+    <div class="box">
+        <form action="BuyerEditProfile.php" method="post">
 
+            <table align = "center">
+                <tr colspan = 2>
+                    <h1> BUYER'S  PROFILE</h1>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Name :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>User Name :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $user?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Phone Number :</b></label></td>
+                    <td><textarea rows="1" column="10" disabled> <?php echo $phone?> </textarea><br></td>
+                </tr>
+                <tr align = "center">
+                    <td><label><b>Address :</b></label></td>
+                    <td><textarea rows="3" column="56" disabled> <?php echo $address?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Pan Number :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $pan?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Account Number :</b></label></td>
+                    <td><textarea rows="2" column="10"disabled> <?php echo $bank?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Company :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $comp?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>license :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $license?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Mail ID :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $mail?> </textarea><br></td>
+                </tr>
+                
+                <tr colspan="2" align="center">
+                <td colspan="2"><input type="button" value="Edit Profile" onclick="redirectToEditProfile()"></td>
+            </tr>
+        </table>
+            </table>
+            
+        </form>
+ 
+    </div>
+
+</body>
 </html>

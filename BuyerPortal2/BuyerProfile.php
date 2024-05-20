@@ -148,7 +148,7 @@
 
 <body>
     <div class="just">
-        <a  href="BuyerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
+        <a  href="bhome.php"> <i  class="fa fa-home fa-4x"></i></a>
     </div>
 
     <div class="box">

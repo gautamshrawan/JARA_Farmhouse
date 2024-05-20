@@ -54,13 +54,15 @@ include("../Functions/functions.php");
         padding: 0;
         box-sizing: border-box;
     }
-
+    .navbar {
+  height: 50px;
+}
     nav {
-        background-color: #292b2c;
+        background-color: white;
     }
 
     .navbar-custom {
-        background-color: #292b2c;
+        background-color: white;
     }
 
     /* change the brand and text color */
@@ -207,9 +209,19 @@ include("../Functions/functions.php");
 <body>
 
 
+<header style="background-color: white; color: green; padding: 10px;">
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+    <div class="title" style="flex: 1; text-align: center;">Fresh from Farm to Table: JARA - Your Homegrown Market!</div>
+    <div>
+    <a href="../auth/FarmerLogin.php" style="color: green; text-decoration: none; margin-right: 12px;">Become a Farmer</a>
+      <!-- Corrected typo "Became a Framer" to "Become a Farmer" -->
+    </div>
+  </div>
+</header>
 
 
-<nav class="navbar navbar-expand-xl ">
+
+    <nav class="navbar navbar-expand-xl ">
 
         <div class=" flex-row-reverse left ">
 
@@ -221,14 +233,14 @@ include("../Functions/functions.php");
             </div>
             <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;margin-top:2px;'></i></div>
             <a class="float-left" href="bhome.php">
-                <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
+                <img src="jara.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
             </a>
         </div>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;margin-right:-9%;font-size:28px;"></i></span>
         </button>
         <a class="float-left" href="bhome.php">
-            <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
+            <img src="Jara.png" class="float-left mr-2 moblogo" alt="Logo" style="height:100px; padding:10px;">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -250,7 +262,6 @@ include("../Functions/functions.php");
                     echo "<a href='BuyerProfile.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
                     echo "<a href= 'Transaction.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Transactions</a>";
                     echo "<a href='saveforlater.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Save For Later</a>";
-                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Subscriptions</a>";
                     echo "<a href='farmer.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Farmers</a>";
                     echo "<a href='../Includes/logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
                 } else {
@@ -280,7 +291,6 @@ include("../Functions/functions.php");
                     if (isset($_SESSION['phonenumber'])) {
                         echo "<a href='BuyerProfile2.php' class='dropdown-item  ' style='padding-right:-20px;'>Profile</a>";
                         echo "<a href='Transaction.php' class='dropdown-item ' style='padding-right:-20px;'>Transactions</a>";
-                        echo "<a href='#' class='dropdown-item'  style='padding-right:-20px;'>Subscriptions</a>";
                         echo "<a href='saveforlater.php' class='dropdown-item' style='padding-right:-20px;'>Save For Later</a>";
                         echo "<a href='farmers.php' class='dropdown-item' style='padding-right:-20px;' >Farmers</a>";
                         echo "<a href='../Includes/logout.php' class='dropdown-item ' style='padding-right:-20px;'>Logout</a>";
@@ -296,77 +306,59 @@ include("../Functions/functions.php");
         </div>
 
     </nav>
+    <hr>
+
     <div class="text-center container">
-            <br>
+    <br>
+    <b>
+        <h1 class="guard text-center" style="font-family: 'Times New Roman', Times, serif;"><span><b>Farmers</b></span></h1>
+    </b>
+</div>
 
-            <b>
-                <h1 class="guard text-center"style="  font-family: 'Times New Roman', Times, serif;"><span><b>Farmers</b></span>
-                </h1>
-            </b>
-        </div>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 ">
-                <div class="card border-dark border" >
-                    <div class="card-body ">
-                        <h5 class="card-title text-center"><img src="iconbig3.png" style=" margin-bottom:  10px;"></h5>
-                        <h4 class="card-subtitle mb-2  text-center">Abhishek</h4>
-                        <p class="card-text text-center">Vashi, Maharashtra<br><br>
-                            <button type="button" class="btn  border-dark border" style="background-color:#FFD700;color:black">View Profile </button>
-                        </p>
-                        <!-- <a href="#" class="card-link text-center">Card link</a>
-                      <a href="#" class="card-link text-center">Another link</a> -->
+<div class="container mt-5">
+    <div class="row justify-content-around">
+        <?php
+        // Assuming you have already established a database connection
+
+        // Query to fetch farmer details from the database
+        $query = "SELECT farmer_name, farmer_phone, farmer_address FROM farmerregistration";
+
+        // Perform the query
+        $result = mysqli_query($con, $query);
+
+        // Check if there are any results
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through the results and generate HTML for each farmer
+            while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4"> <!-- Added mb-4 for margin bottom -->
+                    <div class="card border-dark border">
+                        <div class="card-body">
+                            <h5 class="card-title text-center"><img src="iconbig3.png" style="margin-bottom: 10px;"></h5>
+                            <h4 class="card-subtitle mb-2 text-center"><?php echo $row['farmer_name']; ?></h4>
+                            <p class="card-text text-center">
+                                Phone: <?php echo $row['farmer_phone']; ?><br>
+                                Address: <?php echo $row['farmer_address']; ?><br><br>
+                                <button type="button" class="btn border-dark border" style="background-color:#FFD700;color:black">View Profile</button>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 ">
-                <div class="card border-dark border" >
-                    <div class="card-body ">
-                        <h5 class="card-title text-center"><img src="iconbig.png" style=" margin-bottom:  10px;"></h5>
-                        <h4 class="card-subtitle mb-2  text-center">Ansh</h4>
-                        <p class="card-text text-center">Kopar, Maharashtra<br><br>
-                            <button type="button" class="btn  border-dark border" style="background-color:#FFD700;color:black">View Profile </button>
-                        </p>
-                        <!-- <a href="#" class="card-link text-center">Card link</a>
-                      <a href="#" class="card-link text-center">Another link</a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 ">
-                <div class="card border-dark border" >
-                    <div class="card-body ">
-                        <h5 class="card-title text-center"><img src="iconbig2.png" style=" margin-bottom:  10px;"></h5>
-                        <h4 class="card-subtitle mb-2  text-center">Gladina</h4>
-                        <p class="card-text text-center">Thane, Maharashtra<br><br>
-                            <button type="button" class="btn  border-dark border" style="background-color:#FFD700;color:black">View Profile </button>
-                        </p>
-                        <!-- <a href="#" class="card-link text-center">Card link</a>
-                      <a href="#" class="card-link text-center">Another link</a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 ">
-                <div class="card border-dark border" >
-                    <div class="card-body ">
-                        <h5 class="card-title text-center"><img src="iconbig4.png" style=" margin-bottom:  10px;"></h5>
-                        <h4 class="card-subtitle mb-2  text-center">Calista</h4>
-                        <p class="card-text text-center">Wadala, Maharashtra<br><br>
-                            <button type="button" class="btn  border-dark border" style="background-color:#FFD700;color:black">View Profile </button>
-                        </p>
-                        <!-- <a href="#" class="card-link text-center">Card link</a>
-                      <a href="#" class="card-link text-center">Another link</a> -->
-                    </div>
-                </div>
-            </div>
+        <?php
+            }
+        } else {
+            echo "No farmers found.";
+        }
 
-        </div>
-
-
+        // Close the database connection
+        mysqli_close($con);
+        ?>
     </div>
+</div>
 
 
-
-
+<br>
+<br>
 
 
 
@@ -382,9 +374,11 @@ include("../Functions/functions.php");
         <div class="container">
             <div class="row text-center text-xs-center text-sm-left text-md-left">
                 <div class="col aligncenter">
-                    <p>Payment Option</p>
-                    <img src="../Images/Website/paytm1.jpg" alt="paytm">
-                    <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
+                    <br>
+                    <h5>Payment Option</h5>
+                    <img src="../Images/Website/Esewa.png" alt="esewa" style="height:37px" >
+                    <img src="../Images/Website/Khalti.png" alt="esewa" style="height:37px">
+                    <img src="../Images/Website/cod.png" alt="paytm" style="height:57px">
                 </div>
             </div>
             <div class="row">
@@ -401,12 +395,13 @@ include("../Functions/functions.php");
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
-                    <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
-                    <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
+                    <p><u><a href="https://www.agrocraft.com/">Jara</a></u> is a Multitrading Company for farmers ang traders</p>
+                    <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">JARA</a></p>
                 </div>
                 </hr>
             </div>
         </div>
+    </section>
 </body>
 
 </html>

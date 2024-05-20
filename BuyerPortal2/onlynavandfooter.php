@@ -183,38 +183,26 @@
 
 
 
-<header style="background-color: white; color: green; padding: 10px;">
-  <div style="display: flex; align-items: center; justify-content: space-between;">
-    <div class="title" style="flex: 1; text-align: center;">Fresh from Farm to Table: JARA - Your Homegrown Market!</div>
-    <div>
-    <a href="../auth/FarmerLogin.php" style="color: green; text-decoration: none; margin-right: 12px;">Become a Farmer</a>
-      <!-- Corrected typo "Became a Framer" to "Become a Farmer" -->
-    </div>
-  </div>
-</header>
-
-
-
-    <nav class="navbar navbar-expand-xl ">
-
+<nav class="navbar navbar-expand-xl ">
+        <!-- <a href="#" class="navbar-brand">Academind</a> -->
         <div class=" flex-row-reverse left ">
 
             <div class="p-2">
                 <div class="icon2">
                     <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green ;margin-top:2px;">&#61562;</i></a>
-                    <span id="icon" style="color:green"> <?php echo totalItems(); ?> </span>
+                    <span id="icon" style="color:green"> 5 </span>
                 </div>
             </div>
-            <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;margin-top:2px;'></i></div>
-            <a class="float-left" href="bhome.php">
-                <img src="jara.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
+            <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;margin-top:2px; visibility:hidden;'></i></div>
+            <a class="float-left" href="#">
+                <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
             </a>
         </div>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;margin-right:-9%;font-size:28px;"></i></span>
         </button>
-        <a class="float-left" href="bhome.php">
-            <img src="Jara.png" class="float-left mr-2 moblogo" alt="Logo" style="height:100px; padding:10px;">
+        <a class="float-left" href="#">
+            <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -222,28 +210,17 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-search" style="font-size:20px;color:green; "></i></div>
                 </div>
-                <form action="SearchResult.php" method="get" enctype="multipart/form-data">
-                    <input type="text" class="form-control " id="inlineFormInputGroup" name="search" placeholder="Search for fruits,vegetables or crops " style="width:500px;">
-                </form>
+                <input type="text" class="form-control " id="inlineFormInputGroup" placeholder="Search for fruits,vegetables or crops ">
             </div>
-            <?php
-            getUsername();
-            ?>
+            <div class="text-success  logins ">Login</div>
             <div class="list-group moblists">
-
-                <?php
-                if (isset($_SESSION['phonenumber'])) {
-                    echo "<a href='BuyerProfile.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
-                    echo "<a href= 'Transaction.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Transactions</a>";
-                    echo "<a href='saveforlater.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Save For Later</a>";
-                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Subscriptions</a>";
-                    echo "<a href='farmer.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Farmers</a>";
-                    echo "<a href='../Includes/logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
-                } else {
-                    echo "<a href='../auth/BuyerLogin.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Login</a>";
-                }
-                ?>
-
+                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">
+                    Profile
+                </a>
+                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Transactions</a>
+                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">subscriptions</a>
+                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Farmers</a>
+                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">Logout</a>
             </div>
         </div>
 
@@ -254,7 +231,7 @@
             <div class="p-2 cart">
                 <div class="icon2">
                     <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green">&#61562;</i></a>
-                    <span id="icon" style="color:green"> <?php echo totalItems(); ?> </span>
+                    <span id="icon" style="color:green"> 5 </span>
                 </div>
             </div>
             <div class="dropdown p-2 settings ">
@@ -262,27 +239,19 @@
                     Settings
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <?php
-                    if (isset($_SESSION['phonenumber'])) {
-                        echo "<a href='BuyerProfile2.php' class='dropdown-item  ' style='padding-right:-20px;'>Profile</a>";
-                        echo "<a href='Transaction.php' class='dropdown-item ' style='padding-right:-20px;'>Transactions</a>";
-                        echo "<a href='#' class='dropdown-item'  style='padding-right:-20px;'>Subscriptions</a>";
-                        echo "<a href='saveforlater.php' class='dropdown-item' style='padding-right:-20px;'>Save For Later</a>";
-                        echo "<a href='farmers.php' class='dropdown-item' style='padding-right:-20px;' >Farmers</a>";
-                        echo "<a href='../Includes/logout.php' class='dropdown-item ' style='padding-right:-20px;'>Logout</a>";
-                    } else {
-                        echo "<a href='../auth/BuyerLogin.php' class='dropdown-item ' style='padding-right:-20px;'>Login</a>";
-                    }
-                    ?>
+                    <a class="dropdown-item  " style="padding-right:-20px;">Profile</a>
+                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Transactions</a>
+                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Subscriptions</a>
+                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Farmers</a>
+                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Logout</a>
                 </div>
             </div>
 
-
+            <!-- <div class="p-2 profile"><i class='far fa-user-circle' style='font-size:30px; '></i></div> -->
             <div class="text-success  login">Login</div>
         </div>
 
     </nav>
-    <hr>
     <section id="footer" class="myfooter">
         <div class="container">
             <div class="row text-center text-xs-center text-sm-left text-md-left">

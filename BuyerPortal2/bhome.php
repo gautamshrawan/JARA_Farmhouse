@@ -438,6 +438,8 @@ include("../Functions/functions.php");
 <header style="background-color: white; color: green; padding: 10px;">
   <div style="display: flex; align-items: center; justify-content: space-between;">
     <div class="title" style="flex: 1; text-align: center;">Fresh from Farm to Table: JARA - Your Homegrown Market!</div>
+ 
+ 
     <div>
     <a href="../auth/FarmerLogin.php" style="color: green; text-decoration: none; margin-right: 12px;">Become a Farmer</a>
       <!-- Corrected typo "Became a Framer" to "Become a Farmer" -->
@@ -488,7 +490,6 @@ include("../Functions/functions.php");
                     echo "<a href='BuyerProfile.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
                     echo "<a href= 'Transaction.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Transactions</a>";
                     echo "<a href='saveforlater.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Save For Later</a>";
-                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Subscriptions</a>";
                     echo "<a href='farmer.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Farmers</a>";
                     echo "<a href='../Includes/logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
                 } else {
@@ -518,7 +519,6 @@ include("../Functions/functions.php");
                     if (isset($_SESSION['phonenumber'])) {
                         echo "<a href='BuyerProfile2.php' class='dropdown-item  ' style='padding-right:-20px;'>Profile</a>";
                         echo "<a href='Transaction.php' class='dropdown-item ' style='padding-right:-20px;'>Transactions</a>";
-                        echo "<a href='#' class='dropdown-item'  style='padding-right:-20px;'>Subscriptions</a>";
                         echo "<a href='saveforlater.php' class='dropdown-item' style='padding-right:-20px;'>Save For Later</a>";
                         echo "<a href='farmers.php' class='dropdown-item' style='padding-right:-20px;' >Farmers</a>";
                         echo "<a href='../Includes/logout.php' class='dropdown-item ' style='padding-right:-20px;'>Logout</a>";

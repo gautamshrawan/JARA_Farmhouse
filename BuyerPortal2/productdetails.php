@@ -511,8 +511,8 @@ include("../Functions/functions.php");
                                     <h3 style='padding-left:9px;'>$product_delivery</h3>
                                 </div>
                                   <div class='row text-center ml-4 mt-3'>
-                                   <i class='fas fa-map-marker-alt fa-1x'></i>
-                                    <h5 style='padding-left:9px;'>$district , $state </h5>
+                                 
+                                   
                                 </div>
 
                             </div>
